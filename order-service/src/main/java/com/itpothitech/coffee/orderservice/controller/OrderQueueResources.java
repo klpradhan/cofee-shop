@@ -1,4 +1,4 @@
-package com.itpothitech.coffee.orderservice.resources;
+package com.itpothitech.coffee.orderservice.controller;
 
 import com.itpothitech.coffee.orderservice.dto.OrderQDTO;
 import com.itpothitech.coffee.orderservice.models.Order;

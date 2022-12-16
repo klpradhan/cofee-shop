@@ -1,4 +1,4 @@
-package com.itpothitech.coffee.shopservice.resources;
+package com.itpothitech.coffee.shopservice.controller;
 
 import com.itpothitech.coffee.shopservice.models.ShopUser;
 import com.itpothitech.coffee.shopservice.services.ShopUserInfo;

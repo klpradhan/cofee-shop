@@ -1,4 +1,4 @@
-package com.itpothitech.coffee.shopservice.resources;
+package com.itpothitech.coffee.shopservice.controller;
 
 import com.itpothitech.coffee.shopservice.dto.SearchShopDTO;
 import com.itpothitech.coffee.shopservice.dto.ShopDTO;

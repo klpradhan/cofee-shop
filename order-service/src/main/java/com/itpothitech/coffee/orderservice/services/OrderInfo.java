@@ -2,7 +2,6 @@ package com.itpothitech.coffee.orderservice.services;
 
 import com.itpothitech.coffee.orderservice.models.Order;
 import com.itpothitech.coffee.orderservice.repository.OrderRepository;
-import com.itpothitech.coffee.orderservice.resources.OrderResource;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;

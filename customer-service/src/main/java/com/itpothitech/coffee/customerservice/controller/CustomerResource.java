@@ -1,4 +1,4 @@
-package com.itpothitech.coffee.customerservice.resources;
+package com.itpothitech.coffee.customerservice.controller;
 
 import com.itpothitech.coffee.customerservice.models.Customer;
 import com.itpothitech.coffee.customerservice.services.CustomerInfo;
