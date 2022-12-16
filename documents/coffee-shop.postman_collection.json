@@ -1,0 +1,532 @@
+{
+	"info": {
+		"_postman_id": "fc7aabca-08b1-415c-8869-22062e52cf81",
+		"name": "coffee-shop",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "14949927"
+	},
+	"item": [
+		{
+			"name": "customer",
+			"item": [
+				{
+					"name": "get customer",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "add customer",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"customerName\": \"Robert\",\r\n    \"contactNum\": \"32342324\",\r\n    \"contactEmail\": \"robert@dummy.com\",\r\n    \"credentials\": \"zzzzzzzzzz\",\r\n    \"address\": \"Blore\",\r\n    \"street\": \"Thirumenahalli\",\r\n    \"city\": \"Bangalore\",\r\n    \"state\": \"KA\",\r\n    \"country\": \"India\",\r\n    \"createDate\": \"2022-12-14T18:30:00.000+00:00\",\r\n    \"modifiedDate\": \"2022-12-14T18:30:00.000+00:00\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8082/coffee/api/v1/customers",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8082",
+							"path": [
+								"coffee",
+								"api",
+								"v1",
+								"customers"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "order",
+			"item": [
+				{
+					"name": "add order",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"customerId\": 213123,\r\n    \"item\": \"tea\",\r\n    \"price\": 10,\r\n    \"timeToPrep\": 200,\r\n    \"status\": \"PLACED\",\r\n    \"shopId\": 24,\r\n    \"createDate\": \"2022-12-14T18:30:00.000+00:00\",\r\n    \"modifiedDate\": \"2022-12-14T18:30:00.000+00:00\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8083/coffee/api/v1/orders",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8083",
+							"path": [
+								"coffee",
+								"api",
+								"v1",
+								"orders"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "add queue",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"shopId\":24,\r\n    \"orderId\":99\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8083/coffee/api/v1/orders/queues",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8083",
+							"path": [
+								"coffee",
+								"api",
+								"v1",
+								"orders",
+								"queues"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get queue",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8083/coffee/api/v1/orders/queues/24",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8083",
+							"path": [
+								"coffee",
+								"api",
+								"v1",
+								"orders",
+								"queues",
+								"24"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete queue",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"shopId\":24,\r\n    \"orderId\":39\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8083/coffee/api/v1/orders/queues",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8083",
+							"path": [
+								"coffee",
+								"api",
+								"v1",
+								"orders",
+								"queues"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "shop",
+			"item": [
+				{
+					"name": "get shop",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "coffee321",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "coffee",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://localhost:8081/coffee/api/v1/shops/34",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"coffee",
+								"api",
+								"v1",
+								"shops",
+								"34"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "search shop",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "coffee321",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "coffee",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"address\": \"Blore\",\r\n    \"street\": \"Thirumenahalli\",\r\n    \"city\": \"Bangalore\",\r\n    \"state\": \"KA\",\r\n    \"country\": \"India\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8081/coffee/api/v1/shops",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"coffee",
+								"api",
+								"v1",
+								"shops"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update shop",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "coffee321",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "coffee",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"shopId\": 34,\r\n    \"address\": \"Blore\",\r\n    \"street\": \"Thirumenahalli\",\r\n    \"city\": \"Bangalore\",\r\n    \"state\": \"KA\",\r\n    \"country\": \"India\",\r\n    \"menuId\": 33,\r\n    \"queueNum\": 3,\r\n    \"maxQueueSize\": 10,\r\n    \"openingTime\": \"08:30\",\r\n    \"closingTime\": \"17:00\",\r\n    \"created_by\": 23134,\r\n    \"create_date\": \"2022-12-14T18:30:00.000+00:00\",\r\n    \"modified_date\": \"2022-12-14T18:30:00.000+00:00\",\r\n    \"menu\": {\r\n        \"menuId\": 33,\r\n        \"itemName\": \"tea\",\r\n        \"price\": 10,\r\n        \"prepTime\": 300,\r\n        \"create_date\": \"2022-12-14T18:30:00.000+00:00\",\r\n        \"modified_date\": \"2022-12-14T18:30:00.000+00:00\"\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8081/coffee/api/v1/shops/34",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"coffee",
+								"api",
+								"v1",
+								"shops",
+								"34"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "crete shop",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "coffee321",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "coffee",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"address\": \"Blore\",\r\n    \"street\": \"Thirumenahalli\",\r\n    \"city\": \"Bangalore\",\r\n    \"state\": \"KA\",\r\n    \"country\": \"India\",\r\n    \"menu\": {\r\n        \"itemName\":\"cappuccino\",\r\n        \"price\":\"10\",\r\n        \"prepTime\":\"300\",\r\n        \"create_date\": \"2022-12-15T05:57:00.623+00:00\",\r\n        \"modified_date\": \"2022-12-15T05:57:00.623+00:00\"\r\n    },\r\n    \"queueNum\": 3,\r\n    \"maxQueueSize\": 10,\r\n    \"openingTime\": \"08:30\",\r\n    \"closingTime\": \"17:00\",\r\n    \"created_by\": 23134,\r\n    \"create_date\": \"2022-12-15T05:57:00.623+00:00\",\r\n    \"modified_date\": \"2022-12-15T05:57:00.623+00:00\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8081/coffee/api/v1/shops",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"coffee",
+								"api",
+								"v1",
+								"shops"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete shop",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "coffee321",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "coffee",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8081/coffee/api/v1/shops/26",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"coffee",
+								"api",
+								"v1",
+								"shops",
+								"26"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "create user",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "coffee321",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "coffee",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"userName\": \"kamal\",\r\n    \"contactNum\": \"909009009\",\r\n    \"contactEmail\": \"dummy@com.com\",\r\n    \"credentials\": \"xxxxx\",\r\n    \"role\": \"ADMIN\",\r\n    \"shopId\": \"34\",\r\n    \"createDate\": \"2022-12-14T18:30:00.000+00:00\",\r\n    \"modifiedDate\": \"2022-12-14T18:30:00.000+00:00\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8081/coffee/api/v1/users",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"coffee",
+								"api",
+								"v1",
+								"users"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get user",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8081/coffee/api/v1/users/40",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"coffee",
+								"api",
+								"v1",
+								"users",
+								"40"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "create user",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"shopUserId\": 46,\r\n    \"userName\": \"kamal\",\r\n    \"contactNum\": \"149875987329\",\r\n    \"contactEmail\": \"dummy@com.com\",\r\n    \"credentials\": \"xxxxx\",\r\n    \"role\": \"ADMIN\",\r\n    \"shopId\": 39,\r\n    \"createDate\": \"2022-12-14T18:30:00.000+00:00\",\r\n    \"modifiedDate\": \"2022-12-14T18:30:00.000+00:00\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8081/coffee/api/v1/users/46",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"coffee",
+								"api",
+								"v1",
+								"users",
+								"46"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete user",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8081/coffee/api/v1/users/46",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"coffee",
+								"api",
+								"v1",
+								"users",
+								"46"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
