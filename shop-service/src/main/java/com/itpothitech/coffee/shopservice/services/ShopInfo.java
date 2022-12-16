@@ -1,9 +1,7 @@
 package com.itpothitech.coffee.shopservice.services;
 
-import com.fasterxml.jackson.databind.jsonFormatVisitors.JsonArrayFormatVisitor;
 import com.google.gson.*;
 import com.itpothitech.coffee.shopservice.dto.ItemDTO;
-import com.itpothitech.coffee.shopservice.dto.MenuDTO;
 import com.itpothitech.coffee.shopservice.dto.SearchShopDTO;
 import com.itpothitech.coffee.shopservice.dto.ShopDTO;
 import com.itpothitech.coffee.shopservice.models.Menu;
@@ -14,10 +12,15 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-import java.util.ArrayList;
 import java.util.List;
-import java.util.Set;
 
+/**
+ * Shop App Service
+ * Features:
+ * A) Register a new Shop and its menu details
+ * B) Manage Shop : modify queue and max size of the queue
+ *
+ */
 @Service
 @Transactional
 public class ShopInfo {

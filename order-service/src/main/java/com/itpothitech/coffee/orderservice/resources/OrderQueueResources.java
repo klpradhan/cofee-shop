@@ -12,6 +12,14 @@ import java.net.URI;
 import java.net.URISyntaxException;
 import java.util.Set;
 
+/**
+ * Order Queue Service - the orchestrator
+ * Features:
+ * A) Add to the queue
+ * B) Remove from the queue
+ * C) Display list of orders in the queue for a shop
+ *
+ */
 @RestController
 @RequestMapping(path="/coffee/api/v1")
 public class OrderQueueResources {

@@ -10,6 +10,15 @@ import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 import java.net.URI;
 import java.net.URISyntaxException;
 
+/**
+ * Order Service
+ * Features:
+ * A) Place a new order
+ * B) Add an order to a queue of a specific shop
+ * C) Remove an order from a queue of a specific shop
+ *
+ */
+
 @RestController
 @RequestMapping(path="/coffee/api/v1")
 public class OrderResource {

@@ -10,6 +10,15 @@ import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 import java.net.URI;
 import java.net.URISyntaxException;
 
+/**
+ * Customer App Service
+ * Features:
+ * A) Register as a new customer
+ * B) Manage customer account
+ * C) Find a shop
+ *
+ */
+
 @RestController
 @RequestMapping(path="/coffee/api/v1")
 public class CustomerResource {

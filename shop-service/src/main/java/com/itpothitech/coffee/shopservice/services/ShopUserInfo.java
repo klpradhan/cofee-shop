@@ -6,6 +6,14 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+/**
+ * Shop User Service
+ * Features:
+ * A) Register a new Shop User with appropriate roles
+ * B) Manage user account
+ *
+ */
+
 @Service
 @Transactional
 public class ShopUserInfo {
